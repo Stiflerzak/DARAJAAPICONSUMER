@@ -1,0 +1,122 @@
+{
+  "groups": [
+    {
+      "name": "mpesa.daraja",
+      "type": "com.codelens.darajaapi.config.MpesaConfiguration",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mpesa.daraja.b2c-initiator-name",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.b2c-initiator-password",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.b2c-queue-timeout-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.b2c-result-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.b2c-transaction-endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.check-account-balance-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.confirmation-u-r-l",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.consumer-key",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.consumer-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.grant-type",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.lnm-query-request-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.oauth-endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.register-url-endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.response-type",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.short-code",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.simulate-transaction-endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.stk-pass-key",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.stk-push-request-callback-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.stk-push-request-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.stk-push-short-code",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.transaction-result-url",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    },
+    {
+      "name": "mpesa.daraja.validation-u-r-l",
+      "type": "java.lang.String",
+      "sourceType": "com.codelens.darajaapi.config.MpesaConfiguration"
+    }
+  ],
+  "hints": []
+}
