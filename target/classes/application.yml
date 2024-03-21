@@ -29,8 +29,8 @@ mpesa:
 spring:
   datasource:
     url: jdbc:mariadb://localhost:3306/daraja?allowPublicKeyRetrieval=true&useSSL=false
-    username: konj
-    password: Hilary@4321#
+    username: root
+    password: 123456789
   jpa:
     show-sql: false
     hibernate:

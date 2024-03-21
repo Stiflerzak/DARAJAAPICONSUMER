@@ -243,6 +243,7 @@ public class DarajaApiImpl implements DarajaApi {
 
     }
 
+//M-Pesa Express (STKPUSH)
     @Override
     public StkPushSyncResponse performStkPushTransaction(InternalStkPushRequest internalStkPushRequest) {
 
@@ -252,7 +253,6 @@ public class DarajaApiImpl implements DarajaApi {
         String transactionTimestamp = HelperUtility.getTransactionTimestamp();
         String stkPushPassword = HelperUtility.getStkPushPassword(mpesaConfiguration.getStkPushShortCode(),
                 mpesaConfiguration.getStkPassKey(), transactionTimestamp);
-
         externalStkPushRequest.setPassword(stkPushPassword);
         externalStkPushRequest.setTimestamp(transactionTimestamp);
         externalStkPushRequest.setTransactionType(Constants.CUSTOMER_PAYBILL_ONLINE);
@@ -263,7 +263,6 @@ public class DarajaApiImpl implements DarajaApi {
         externalStkPushRequest.setCallBackURL(mpesaConfiguration.getStkPushRequestCallbackUrl());
         externalStkPushRequest.setAccountReference(HelperUtility.getTransactionUniqueNumber());
         externalStkPushRequest.setTransactionDesc(String.format("%s Transaction", internalStkPushRequest.getPhoneNumber()));
-
         AccessTokenResponse accessTokenResponse = getAccessToken();
 
         RequestBody body = RequestBody.create(JSON_MEDIA_TYPE,
