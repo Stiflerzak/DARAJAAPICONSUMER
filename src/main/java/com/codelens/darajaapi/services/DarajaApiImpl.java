@@ -11,7 +11,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.util.Objects;
 
@@ -34,13 +33,13 @@ public class DarajaApiImpl implements DarajaApi {
     /**
      * @return Returns Daraja API Access Token Response
      */
+
+    //Todo add try catch
     @Override
     public AccessTokenResponse getAccessToken() {
-
         // get the Base64 rep of consumerKey + ":" + consumerSecret
         String encodedCredentials = HelperUtility.toBase64String(String.format("%s:%s", mpesaConfiguration.getConsumerKey(),
                 mpesaConfiguration.getConsumerSecret()));
-
         Request request = new Request.Builder()
                 .url(String.format("%s?grant_type=%s", mpesaConfiguration.getOauthEndpoint(), mpesaConfiguration.getGrantType()))
                 .get()
@@ -63,7 +62,6 @@ public class DarajaApiImpl implements DarajaApi {
     @Override
     public RegisterUrlResponse registerUrl() {
         AccessTokenResponse accessTokenResponse = getAccessToken();
-
         RegisterUrlRequest registerUrlRequest = new RegisterUrlRequest();
         registerUrlRequest.setConfirmationURL(mpesaConfiguration.getConfirmationURL());
         registerUrlRequest.setResponseType(mpesaConfiguration.getResponseType());
@@ -273,7 +271,6 @@ public class DarajaApiImpl implements DarajaApi {
                 .post(body)
                 .addHeader(AUTHORIZATION_HEADER_STRING, String.format("%s %s", BEARER_AUTH_STRING, accessTokenResponse.getAccessToken()))
                 .build();
-
 
         try {
             Response response = okHttpClient.newCall(request).execute();

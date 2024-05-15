@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,10 +36,24 @@ public class MpesaController {
         this.b2CC2BEntriesRepository = b2CC2BEntriesRepository;
     }
 
+//Todo add try catch block. handle scenarios where daraja api is unreachable.
+
     @GetMapping(path = "/token", produces = "application/json")
     public ResponseEntity<AccessTokenResponse> getAccessToken() {
-        return ResponseEntity.ok(darajaApi.getAccessToken());
+//        return ResponseEntity.ok(darajaApi.getAccessToken());
+
+        try {
+            AccessTokenResponse accessToken = darajaApi.getAccessToken();
+            return ResponseEntity.ok(accessToken);
+        } catch (Exception e) {
+            log.info("Authorization Daraja Api is unreachable, Try again later");
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+            //Todo use customized error messages.
+        }
     }
+
 
     @PostMapping(path = "/register-url", produces = "application/json")
     public ResponseEntity<RegisterUrlResponse> registerUrl() {
